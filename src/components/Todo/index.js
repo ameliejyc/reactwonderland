@@ -30,7 +30,7 @@ class Todo extends Component {
           return <List key={index}>{item}</List>;
         })}
         <Input
-          todo
+          long
           value={this.state.text}
           onChange={e => handleInput(e.target.value)}
           placeholder="type here"

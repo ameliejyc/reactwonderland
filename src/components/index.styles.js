@@ -37,9 +37,9 @@ export const Link = styled.a`
 `;
 
 export const Input = styled.input`
-  font-size: ${props => (props.todo ? '1.5em' : '2em')};
+  font-size: ${props => (props.long ? '1.5em' : '2em')};
   text-align: center;
-  width: ${props => (props.todo ? '70vw' : '2em')};
+  width: ${props => (props.long ? '70vw' : '2em')};
   margin: 0.5em;
   padding: 0.5em;
   border: 2px white solid;
@@ -67,4 +67,26 @@ export const List = styled.li`
   font-size: 1em;
   color: lightpink;
   margin: 0.5em;
+`;
+
+export const VideoSection = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+export const VideoItem = styled.div`
+  margin: 1em;
+  border: white;
+`;
+
+export const Chevron = styled.img`
+color: white;
+  transform: ${props => (props.isClosed ? 'none' : 'rotate(180deg)')}
+  transition: transform 0.2s;
+`;
+
+export const MenuList = styled.ul`
+  display: ${props => (props.isClosed ? 'none' : 'block')};
+  list-style: none;
+  text-transform: uppercase;
 `;
