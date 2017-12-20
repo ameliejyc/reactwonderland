@@ -20,7 +20,7 @@ export const Section = styled.section`
 `;
 
 export const Title = styled.h1`
-  font-size: 3em;
+  font-size: ${props => (props.small ? '1em' : '3em')};
   text-align: center;
   color: white;
 `;
@@ -37,9 +37,9 @@ export const Link = styled.a`
 `;
 
 export const Input = styled.input`
-  font-size: 2em;
+  font-size: ${props => (props.todo ? '1.5em' : '2em')};
   text-align: center;
-  width: 2em;
+  width: ${props => (props.todo ? '70vw' : '2em')};
   margin: 0.5em;
   padding: 0.5em;
   border: 2px white solid;
@@ -61,4 +61,10 @@ export const Button = styled.button`
   margin: 0.5em;
   border: 8px white solid;
   background-color: lightpink;
+`;
+
+export const List = styled.li`
+  font-size: 1em;
+  color: lightpink;
+  margin: 0.5em;
 `;
