@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { API_KEY } from '../../config.env';
+import { API_KEY } from '../../config.json';
 import Search from './Search';
 import {
   Section,
@@ -12,7 +12,7 @@ import {
 
 const rootUrl = 'https://www.googleapis.com/youtube/v3/search?maxResults=5';
 
-const YTSearch = (options, callback) => {
+const ytSearch = options => {
   if (!options.key) {
     throw new Error('Youtube search needs api key!');
   }
@@ -24,16 +24,9 @@ const YTSearch = (options, callback) => {
     type: 'video'
   };
 
-  axios
-    .get(rootUrl, {
-      params
-    })
-    .then(function(response) {
-      if (callback) callback(response.data.items);
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
+  return axios.get(rootUrl, {
+    params
+  });
 };
 
 class Youtube extends Component {
@@ -45,12 +38,16 @@ class Youtube extends Component {
   }
 
   videoSearch(term) {
-    YTSearch({ key: API_KEY, term: term }, videos => {
-      console.log(API_KEY);
-      this.setState({
-        videos: videos
+    ytSearch({ key: API_KEY, term: term })
+      .then(response => {
+        console.log(response.data.items);
+        this.setState({
+          videos: response.data.items
+        });
+      })
+      .catch(error => {
+        console.log(error);
       });
-    });
   }
 
   render() {
@@ -61,8 +58,6 @@ class Youtube extends Component {
     const handleClick = () => {
       videoSearch();
     };
-
-    // console.log(API_KEY);
 
     return (
       <Section id="youtube">

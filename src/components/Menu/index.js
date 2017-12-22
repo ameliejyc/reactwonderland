@@ -16,7 +16,7 @@ class Menu extends Component {
       <Section id="menu">
         <div onClick={Toggle}>
           <Title>Menu</Title>
-          <Chevron src="./chevron.svg" isClosed={isClosed} />
+          <Chevron src="chevron.svg" isClosed={isClosed} />
         </div>
         <MenuList isClosed={isClosed}>
           <List>About</List>

@@ -80,9 +80,9 @@ export const VideoItem = styled.div`
 `;
 
 export const Chevron = styled.img`
-color: white;
-  transform: ${props => (props.isClosed ? 'none' : 'rotate(180deg)')}
-  transition: transform 0.2s;
+  color: white;
+  transform: ${props => (props.isClosed ? 'none' : 'rotate(180deg)')};
+  transition: transform 0.5s;
 `;
 
 export const MenuList = styled.ul`

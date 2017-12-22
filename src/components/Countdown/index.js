@@ -54,7 +54,7 @@ class Countdown extends Component {
             value={this.state.minutes}
             onChange={e => onMinutesInput(e.target.value)}
             min="0"
-            max="999"
+            max="60"
           />
           <strong>minutes</strong>
           <Input
