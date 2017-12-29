@@ -23,6 +23,7 @@ export const Title = styled.h1`
   font-size: ${props => (props.small ? '1em' : '3em')};
   text-align: center;
   color: white;
+  margin-bottom: 0.5em;
 `;
 
 export const Link = styled.a`
@@ -79,14 +80,23 @@ export const VideoItem = styled.div`
   border: white;
 `;
 
+export const MenuContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 export const Chevron = styled.img`
+  width: 50px;
   color: white;
+  margin-left: 1em;
   transform: ${props => (props.isClosed ? 'none' : 'rotate(180deg)')};
-  transition: transform 0.5s;
+  transition: transform 0.6s;
 `;
 
 export const MenuList = styled.ul`
   display: ${props => (props.isClosed ? 'none' : 'block')};
+  margin: 0;
+  padding: 0;
   list-style: none;
   text-transform: uppercase;
 `;

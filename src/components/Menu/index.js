@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
-import { Section, Title, Chevron, MenuList, List } from '../index.styles';
+import {
+  Section,
+  MenuContainer,
+  Title,
+  Chevron,
+  MenuList,
+  List,
+} from '../index.styles';
 
 class Menu extends Component {
   state = {
-    isClosed: true
+    isClosed: true,
   };
   render() {
     const { isClosed } = this.state;
@@ -14,15 +21,17 @@ class Menu extends Component {
 
     return (
       <Section id="menu">
-        <div onClick={Toggle}>
-          <Title>Menu</Title>
-          <Chevron src="chevron.svg" isClosed={isClosed} />
+        <div>
+          <MenuContainer onClick={Toggle}>
+            <Title>Menu</Title>
+            <Chevron src="chevron.svg" isClosed={isClosed} />
+          </MenuContainer>
+          <MenuList isClosed={isClosed}>
+            <List>About</List>
+            <List>People</List>
+            <List>Contact</List>
+          </MenuList>
         </div>
-        <MenuList isClosed={isClosed}>
-          <List>About</List>
-          <List>People</List>
-          <List>Contact</List>
-        </MenuList>
       </Section>
     );
   }
