@@ -45,7 +45,7 @@ export const Link = styled.a`
 
 export const Input = styled.input`
   font-size: ${props => (props.long ? '1.5em' : '2em')};
-  width: ${props => (props.long ? '70vw' : '2em')};
+  width: ${props => (props.long ? '50vw' : '2em')};
   text-align: center;
   margin: 0.5em;
   padding: 0.5em;
@@ -63,7 +63,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  justify-content: ${props => (props.form ? 'right' : null )};
+  justify-content: ${props => (props.form ? 'right' : null)};
   font-size: 2em;
   padding: 1em;
   margin: 0.5em;
@@ -106,4 +106,26 @@ export const MenuList = styled.ul`
   padding: 0;
   list-style: none;
   text-transform: uppercase;
+`;
+
+export const ShoppingContainer = styled.div`
+  display: flex;
+`;
+
+export const Select = styled.select`
+  display: block;
+  width: 35vw;
+  margin: 1em 0;
+  padding: 5px;
+  font-size: 1em;
+  border-color: white;
+`;
+
+export const Textarea = styled.textarea`
+  display: block;
+  width: 30vw;
+  margin: 1em 0;
+  padding: 5px;
+  font-size: 1em;
+  border-color: white;
 `;

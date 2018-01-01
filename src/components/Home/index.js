@@ -7,6 +7,7 @@ import Youtube from '../Youtube';
 import Menu from '../Menu';
 import Autocomplete from '../Autocomplete';
 import Form from '../Form';
+import ShoppingList from '../ShoppingList/ShoppingList';
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
           <Link href="#menu">Menu</Link>
           <Link href="#autocomplete">Autocomplete</Link>
           <Link href="#form">Form</Link>
+          <Link href="#shoppinglist">ShoppingList</Link>
         </NavBar>
       </Section>
       <Stopwatch />
@@ -30,6 +32,7 @@ const Home = () => {
       <Menu />
       <Autocomplete />
       <Form />
+      <ShoppingList />
     </Container>
   );
 };
