@@ -8,12 +8,15 @@ import Menu from '../Menu/Menu';
 import Autocomplete from '../Autocomplete/Autocomplete';
 import Form from '../Form/Form';
 import ShoppingList from '../ShoppingList/ShoppingList';
+import Tilt from '../Tilt/Tilt';
 
 const Home = () => {
   return (
     <Container>
       <Section>
-        <Title>Reactwonderland</Title>
+        <Tilt>
+          <Title>Reactwonderland</Title>
+        </Tilt>
         <NavBar>
           <Link href="#stopwatch">Stopwatch</Link>
           <Link href="#countdown">Countdown</Link>

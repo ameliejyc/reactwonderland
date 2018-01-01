@@ -39,7 +39,6 @@ export const Link = styled.a`
 
   &:hover {
     color: lightpink;
-    font-weight: bold;
   }
 `;
 
