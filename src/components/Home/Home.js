@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Section, Title, NavBar, Link } from '../index.styles';
-import Stopwatch from '../Stopwatch';
-import Countdown from '../Countdown';
-import Todo from '../Todo';
-import Youtube from '../Youtube';
-import Menu from '../Menu';
-import Autocomplete from '../Autocomplete';
-import Form from '../Form';
+import Stopwatch from '../Stopwatch/Stopwatch';
+import Countdown from '../Countdown/Countdown';
+import Todo from '../Todo/Todo';
+import Youtube from '../Youtube/Youtube';
+import Menu from '../Menu/Menu';
+import Autocomplete from '../Autocomplete/Autocomplete';
+import Form from '../Form/Form';
 import ShoppingList from '../ShoppingList/ShoppingList';
 
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
           <Link href="#menu">Menu</Link>
           <Link href="#autocomplete">Autocomplete</Link>
           <Link href="#form">Form</Link>
-          <Link href="#shoppinglist">ShoppingList</Link>
+          <Link href="#shoppinglist">Shopping List</Link>
         </NavBar>
       </Section>
       <Stopwatch />
