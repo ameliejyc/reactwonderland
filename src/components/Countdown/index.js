@@ -7,8 +7,11 @@ class Countdown extends Component {
     this.state = {
       minutes: 0,
       seconds: 60,
-      active: false
+      active: false,
     };
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
   }
   render() {
     const onMinutesInput = minutes => {
@@ -33,15 +36,20 @@ class Countdown extends Component {
 
     const handleCountdown = (minutes, seconds) => {
       if (seconds === 0 && minutes === 0) {
-        clearInterval();
+        alert('Countdown finished!');
+        this.setState({
+          seconds: 60,
+          active: false,
+        });
+        clearInterval(this.timer);
       } else if (seconds === 0 && minutes !== 0) {
         this.setState({
           minutes: minutes - 1,
-          seconds: '59'
+          seconds: '59',
         });
       } else {
         this.setState({
-          seconds: seconds - 1
+          seconds: seconds - 1,
         });
       }
     };

@@ -23,12 +23,19 @@ export const Title = styled.h1`
   font-size: ${props => (props.small ? '1em' : '3em')};
   text-align: center;
   color: white;
+  margin-bottom: 0.5em;
+`;
+
+export const NavBar = styled.li`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export const Link = styled.a`
   color: white;
   font-size: 2em;
-  margin: 0 0.5em;
+  margin: 0.5em;
 
   &:hover {
     color: lightpink;
@@ -38,8 +45,8 @@ export const Link = styled.a`
 
 export const Input = styled.input`
   font-size: ${props => (props.long ? '1.5em' : '2em')};
-  text-align: center;
   width: ${props => (props.long ? '70vw' : '2em')};
+  text-align: center;
   margin: 0.5em;
   padding: 0.5em;
   border: 2px white solid;
@@ -56,6 +63,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
+  justify-content: ${props => (props.form ? 'right' : null )};
   font-size: 2em;
   padding: 1em;
   margin: 0.5em;
@@ -79,14 +87,23 @@ export const VideoItem = styled.div`
   border: white;
 `;
 
+export const MenuContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 export const Chevron = styled.img`
+  width: 50px;
   color: white;
+  margin-left: 1em;
   transform: ${props => (props.isClosed ? 'none' : 'rotate(180deg)')};
-  transition: transform 0.5s;
+  transition: transform 0.6s;
 `;
 
 export const MenuList = styled.ul`
   display: ${props => (props.isClosed ? 'none' : 'block')};
+  margin: 0;
+  padding: 0;
   list-style: none;
   text-transform: uppercase;
 `;
