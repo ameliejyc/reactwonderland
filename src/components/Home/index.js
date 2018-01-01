@@ -1,29 +1,35 @@
 import React from 'react';
-import { Container, Section, Title, Link } from '../index.styles';
+import { Container, Section, Title, NavBar, Link } from '../index.styles';
 import Stopwatch from '../Stopwatch';
 import Countdown from '../Countdown';
 import Todo from '../Todo';
 import Youtube from '../Youtube';
 import Menu from '../Menu';
+import Autocomplete from '../Autocomplete';
+import Form from '../Form';
 
 const Home = () => {
   return (
     <Container>
       <Section>
         <Title>Reactwonderland</Title>
-        <div>
+        <NavBar>
           <Link href="#stopwatch">Stopwatch</Link>
           <Link href="#countdown">Countdown</Link>
           <Link href="#todo">Todo</Link>
           <Link href="#youtube">Youtube</Link>
           <Link href="#menu">Menu</Link>
-        </div>
+          <Link href="#autocomplete">Autocomplete</Link>
+          <Link href="#form">Form</Link>
+        </NavBar>
       </Section>
       <Stopwatch />
       <Countdown />
       <Todo />
       <Youtube />
       <Menu />
+      <Autocomplete />
+      <Form />
     </Container>
   );
 };

@@ -26,10 +26,16 @@ export const Title = styled.h1`
   margin-bottom: 0.5em;
 `;
 
+export const NavBar = styled.li`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
 export const Link = styled.a`
   color: white;
   font-size: 2em;
-  margin: 0 0.5em;
+  margin: 0.5em;
 
   &:hover {
     color: lightpink;
@@ -39,8 +45,8 @@ export const Link = styled.a`
 
 export const Input = styled.input`
   font-size: ${props => (props.long ? '1.5em' : '2em')};
-  text-align: center;
   width: ${props => (props.long ? '70vw' : '2em')};
+  text-align: center;
   margin: 0.5em;
   padding: 0.5em;
   border: 2px white solid;
@@ -57,6 +63,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
+  justify-content: ${props => (props.form ? 'right' : null )};
   font-size: 2em;
   padding: 1em;
   margin: 0.5em;

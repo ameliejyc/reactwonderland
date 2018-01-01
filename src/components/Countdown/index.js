@@ -10,6 +10,9 @@ class Countdown extends Component {
       active: false,
     };
   }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
   render() {
     const onMinutesInput = minutes => {
       this.setState({ minutes });
